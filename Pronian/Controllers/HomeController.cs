@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting.Server;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Pronian.Controllers
 {
@@ -6,8 +7,11 @@ namespace Pronian.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View("Index");
         }
-
+        public IActionResult Admin()
+        {
+            return View("Admin");
+        }
     }
 }

@@ -1,5 +1,4 @@
-﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +16,8 @@
                     <h1>Admin Dashboard</h1>
                 </div>
                 <div class="col-md-6 text-right">
-                    <a asp-controller="Home" asp-action="Slider" class="btn btn-info mx-2">Edit Slider</a>
+                    <button class="btn btn-success mx-2">Return Page</button>
+                    <button class="btn btn-info mx-2">Edit Slider</button>
                     <button class="btn btn-success mx-2">Manage Products</button>
                 </div>
             </div>
@@ -25,13 +25,7 @@
     </header>
 
     <!-- Main Section -->
-    <main class="container my-5">
-        <div class="row">
-            <div class="col-md-12">
-                <!-- Content Goes Here -->
-            </div>
-        </div>
-    </main>
+    @RenderBody()
 
     <!-- Include Bootstrap JS and jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -39,5 +33,3 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-

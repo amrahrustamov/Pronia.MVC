@@ -1,0 +1,31 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+<main class="container my-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Add New Product</h2>
+            <form>
+                <div class="form-group">
+                    <label for="offerInput">Offer:</label>
+                    <input type="text" class="form-control" id="offer" placeholder="Enter offer">
+                </div>
+                <div class="form-group">
+                    <label for="titleInput">Title:</label>
+                    <input type="text" class="form-control" id="title" placeholder="Enter title">
+                </div>
+                <div class="form-group">
+                    <label for="descriptionInput">Short Description:</label>
+                    <input type="text" class="form-control" id="description" placeholder="Enter short description">
+                </div>
+                <div class="form-group">
+                    <label for="idInput">ID:</label>
+                    <input type="text" class="form-control" id="Order" placeholder="Enter Order">
+                </div>
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+        </div>
+    </div>
+</main>

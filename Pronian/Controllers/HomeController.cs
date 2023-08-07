@@ -5,13 +5,19 @@ namespace Pronian.Controllers
 {
     public class HomeController : Controller
     {
+
         public IActionResult Index()
         {
-            return View("Index");
+            return View();
         }
+
         public IActionResult Admin()
         {
-            return View("Admin");
+            return View();
+        }
+        public IActionResult Slider()
+        {
+            return View();
         }
     }
 }

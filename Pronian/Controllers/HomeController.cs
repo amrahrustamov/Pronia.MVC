@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Mvc;
 using Pronian.Database.Models;
@@ -49,9 +50,12 @@ namespace Pronian.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult ManageProduct(string productName, string url, string color, string size, decimal price, int order)
+        public IActionResult ManageProduct(string productName, string description, string url, string color, string size, decimal price, int order)
         {
-            
+            ProductRepository productRepository = new ProductRepository();
+            List<Products> products = productRepository.GetAll();
+
+            products.Add(new Products(productName, description, url, color, size, price, 9));
 
             return View();
         }

@@ -8,14 +8,14 @@ namespace Pronian.Database.Repositories
 
         static ProductRepository()
         {
-            products.Add(new Products("American Marigold", "description area", "https://www.example.com", "Light green", "Medium size", 23,1));
-            products.Add(new Products("American Marigold", "description area", "https://www.example.com", "Light green", "Medium size", 23, 2));    
-            products.Add(new Products("American Marigold", "description area", "https://www.example.com", "Light green", "Medium size", 23, 3));
-            products.Add(new Products("American Marigold", "description area", "https://www.example.com", "Light green", "Medium size", 23, 4));
-            products.Add(new Products("American Marigold", "description area", "https://www.example.com", "Light green", "Medium size", 23, 5));
-            products.Add(new Products("American Marigold", "description area", "https://www.example.com", "Light green", "Medium size", 23, 6));
-            products.Add(new Products("American Marigold", "description area", "https://www.example.com", "Light green", "Medium size", 23, 7));
-            products.Add(new Products("American Marigold", "description area", "https://www.example.com", "Light green", "Medium size", 23, 8));
+            products.Add(new Products("American Marigold", "description area", "https://www.example.com", "Light green", "Medium size", 23));
+            products.Add(new Products("American Marigold", "description area", "https://www.example.com", "Light green", "Medium size", 23));    
+            products.Add(new Products("American Marigold", "description area", "https://www.example.com", "Light green", "Medium size", 23));
+            products.Add(new Products("American Marigold", "description area", "https://www.example.com", "Light green", "Medium size", 23));
+            products.Add(new Products("American Marigold", "description area", "https://www.example.com", "Light green", "Medium size", 23));
+            products.Add(new Products("American Marigold", "description area", "https://www.example.com", "Light green", "Medium size", 23));
+            products.Add(new Products("American Marigold", "description area", "https://www.example.com", "Light green", "Medium size", 23));
+            products.Add(new Products("American Marigold", "description area", "https://www.example.com", "Light green", "Medium size", 23));
 
         }
         public List<Products> GetAll()

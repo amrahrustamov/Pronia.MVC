@@ -2,16 +2,18 @@
 {
     public class Products
     {
-        public Products(string name, string description, string uRL, string color, string size, decimal price, int productOrder)
+        
+        public Products(string name, string description, string url, string color, string size, decimal price)
         {
             Name = name;
             Description = description;
-            URL = uRL;
+            URL = url;
             Color = color;
             Size = size;
             Price = price;
-            ProductOrder = productOrder;
+            ProductOrder = ++IdCounter;
         }
+        public static int IdCounter { get; private set; }
 
         public string Name { get; set; }
         public string Description { get; set; }

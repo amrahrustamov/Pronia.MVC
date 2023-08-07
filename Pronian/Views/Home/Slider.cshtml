@@ -7,22 +7,26 @@
     <div class="row">
         <div class="col-md-12">
             <h2>Add New Product</h2>
-            <form>
+            <form action="~/Home/Slider" method="post">
                 <div class="form-group">
                     <label for="offerInput">Offer:</label>
-                    <input type="text" class="form-control" id="offer" placeholder="Enter offer">
+                    <input type="text" class="form-control" id="offer" name="offer" placeholder="Enter offer">
                 </div>
                 <div class="form-group">
                     <label for="titleInput">Title:</label>
-                    <input type="text" class="form-control" id="title" placeholder="Enter title">
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Enter title">
                 </div>
                 <div class="form-group">
                     <label for="descriptionInput">Short Description:</label>
-                    <input type="text" class="form-control" id="description" placeholder="Enter short description">
+                    <input type="text" class="form-control" id="description" name="description" placeholder="Enter short description">
                 </div>
                 <div class="form-group">
-                    <label for="idInput">ID:</label>
-                    <input type="text" class="form-control" id="Order" placeholder="Enter Order">
+                    <label for="descriptionInput">URL:</label>
+                    <input type="url" class="form-control" id="url" name="url" placeholder="Enter URL">
+                </div>
+                <div class="form-group">
+                    <label for="orderInput">Order:</label>
+                    <input type="text" class="form-control" id="Order" name="order" placeholder="Enter Order">
                 </div>
                 <button type="submit" class="btn btn-primary">Add</button>
             </form>

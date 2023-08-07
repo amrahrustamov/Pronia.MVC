@@ -24,7 +24,7 @@ Layout = "~/Views/Shared/_Layout.cshtml";
 
                                         foreach (var item in slider)
                                         {
-                                            if (item.Id == 1)
+                                            if (item.Order == 1)
                                             {
                                             <span class="offer">@item.Offer</span>
                                                 <h2 class="title">@item.Title</h2>
@@ -66,7 +66,7 @@ Layout = "~/Views/Shared/_Layout.cshtml";
                                     @{
                                         foreach (var item in slider)
                                         {
-                                            if (item.Id == 2)
+                                            if (item.Order == 2)
                                             {
                                                 <span class="offer">@item.Offer</span>
                                                 <h2 class="title">@item.Title</h2>

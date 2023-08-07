@@ -44,6 +44,11 @@ namespace Pronian.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public IActionResult Shop()
+        {
+            return View();
+        }
 
         [HttpPost]
         public IActionResult Slider(string offer, string title, string description, string url, int order)
@@ -58,23 +63,12 @@ namespace Pronian.Controllers
                     slider.Title = title;
                     slider.ShortDescription = description;
                     slider.URL = url;
-                    slider.Order = order;
                     break;
                 }
             }
-
             return View();
         }
-        [HttpPost]
-        //public IActionResult ManageProduct(string productName, string description, string url, string color, string size, decimal price, int order)
-        //{
-        //    ProductRepository productRepository = new ProductRepository();
-        //    List<Products> products = productRepository.GetAll();
 
-        //    products.Add(new Products(productName, description, url, color, size, price));
-
-        //    return View();
-        //}
         [HttpPost]
         public IActionResult AddProduct(string productName, string description, string url, string color, string size, decimal price, int order)
         {
@@ -104,7 +98,6 @@ namespace Pronian.Controllers
                     break;
                 }
             }
-
             return View();
         }
         [HttpPost]
@@ -121,9 +114,7 @@ namespace Pronian.Controllers
                     break;
                 }
             }
-
             return View();
         }
-
     }
 }

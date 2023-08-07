@@ -1,0 +1,14 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+<div class="container">
+    <h2>Manage products</h2>
+    <div class="btn-group" role="group" aria-label="Menu Options">
+        <a asp-controller="Home" asp-action="EditProduct" type="button" class="btn btn-primary">Edit</a>
+        <a asp-controller="Home" asp-action="DeleteProduct" type="button" class="btn btn-danger">Delete</a>
+        <a asp-controller="Home" asp-action="AddProduct" type="button" class="btn btn-success">Add</a>
+    </div>
+</div>

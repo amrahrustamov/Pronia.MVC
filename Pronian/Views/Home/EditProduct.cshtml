@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+<main class="container my-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Edit Product</h2>
+            <form action="~/Home/EditProduct" method="post">
+                <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <input type="text" class="form-control" id="productName" name="productName" placeholder="Enter product name">
+                </div>
+                <div class="form-group">
+                    <label for="description">Product description</label>
+                    <input type="text" class="form-control" id="productDescription" name="description" placeholder="Enter product description">
+                </div>
+                <div class="form-group">
+                    <label for="productUrl">Product URL</label>
+                    <input type="url" class="form-control" id="productUrl" name="url" placeholder="Enter product URL">
+                </div>
+                <div class="form-group">
+                    <label for="productColor">Product Color</label>
+                    <input type="text" class="form-control" id="productColor" name="color" placeholder="Enter product color">
+                </div>
+                <div class="form-group">
+                    <label for="productSize">Product Size</label>
+                    <input type="text" class="form-control" id="productSize" name="size" placeholder="Enter product size">
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Product Price</label>
+                    <input type="number" class="form-control" id="productPrice" name="price" placeholder="Enter product price">
+                </div>
+                <div class="form-group">
+                    <label for="productOrder">Product Order</label>
+                    <input type="number" class="form-control" id="productOrder" name="order" placeholder="Enter product order">
+                </div>
+                <button type="submit" class="btn btn-primary">Edit Product</button>
+            </form>
+        </div>
+    </div>
+</main>

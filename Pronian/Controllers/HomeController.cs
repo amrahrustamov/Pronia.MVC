@@ -25,7 +25,22 @@ namespace Pronian.Controllers
             return View();
         }
         [HttpGet]
-        public IActionResult ManageProduct()
+        public IActionResult AddProduct()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult ManageProductList()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult EditProduct()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult DeleteProduct()
         {
             return View();
         }
@@ -44,18 +59,68 @@ namespace Pronian.Controllers
                     slider.ShortDescription = description;
                     slider.URL = url;
                     slider.Order = order;
+                    break;
                 }
             }
 
             return View();
         }
         [HttpPost]
-        public IActionResult ManageProduct(string productName, string description, string url, string color, string size, decimal price, int order)
+        //public IActionResult ManageProduct(string productName, string description, string url, string color, string size, decimal price, int order)
+        //{
+        //    ProductRepository productRepository = new ProductRepository();
+        //    List<Products> products = productRepository.GetAll();
+
+        //    products.Add(new Products(productName, description, url, color, size, price));
+
+        //    return View();
+        //}
+        [HttpPost]
+        public IActionResult AddProduct(string productName, string description, string url, string color, string size, decimal price, int order)
         {
             ProductRepository productRepository = new ProductRepository();
             List<Products> products = productRepository.GetAll();
 
-            products.Add(new Products(productName, description, url, color, size, price, 9));
+            products.Add(new Products(productName, description, url, color, size, price));
+
+            return View();
+        }
+        [HttpPost]
+        public IActionResult EditProduct(string productName, string description, string url, string color, string size, decimal price, int order)
+        {
+            ProductRepository productRepository = new ProductRepository();
+            List<Products> products = productRepository.GetAll();
+
+            foreach (Products product in products)
+            {
+                if (product.ProductOrder == order)
+                {
+                    product.Name = productName;
+                    product.Description = description;
+                    product.URL = description;
+                    product.Color = url;
+                    product.Size = size;
+                    product.Price = price;
+                    break;
+                }
+            }
+
+            return View();
+        }
+        [HttpPost]
+        public IActionResult DeleteProduct(string productName, string description, string url, string color, string size, decimal price, int order)
+        {
+            ProductRepository productRepository = new ProductRepository();
+            List<Products> products = productRepository.GetAll();
+
+            foreach (Products product in products)
+            {
+                if (product.ProductOrder == order)
+                {
+                    ProductRepository.products.Remove(product);
+                    break;
+                }
+            }
 
             return View();
         }

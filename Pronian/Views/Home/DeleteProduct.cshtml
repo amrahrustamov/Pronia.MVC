@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+<main class="container my-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Delete Product by ID</h2>
+            <form action="~/Home/DeleteProduct" method="post">
+                <div class="form-group">
+                    <label for="productOrder">Product Order</label>
+                    <input type="number" class="form-control" id="productOrder" name="order" placeholder="Enter product order">
+                </div>
+                <button type="submit" class="btn btn-primary">Delete Product</button>
+            </form>
+        </div>
+    </div>
+</main>

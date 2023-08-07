@@ -3,13 +3,12 @@
     public class Slider
     {
 
-        public Slider(string offer, string title, string shortDescription, string buttonText, string url, int order)
+        public Slider(string offer, string title, string shortDescription, string buttonText, int order)
         {
             Offer = offer;
             Title = title;
             ShortDescription = shortDescription;
             ButtonText = buttonText;
-            URL = url;
             Order = order;
         }
         public static int IdCounter { get; private set; }

@@ -1,17 +1,19 @@
-﻿namespace Pronian.Database.Models
+﻿using System;
+
+namespace Pronian.Database.Models
 {
     public class Slider
     {
 
-        public Slider(string offer, string title, string shortDescription, string buttonText, int order)
+        public Slider(string offer, string title, string shortDescription, string buttonText, string url, int order)
         {
             Offer = offer;
             Title = title;
             ShortDescription = shortDescription;
             ButtonText = buttonText;
+            URL = url;
             Order = order;
         }
-        public static int IdCounter { get; private set; }
 
         public string Offer { get; set; }
         public string Title { get; set; }

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Mvc;
 using Pronian.Database.Models;
 using Pronian.Database.Repositories;
+using Pronian.ViewModels;
 
 namespace Pronian.Controllers
 {
@@ -12,6 +13,8 @@ namespace Pronian.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            
+
             return View();
         }
         [HttpGet]
@@ -103,14 +106,13 @@ namespace Pronian.Controllers
         [HttpPost]
         public IActionResult DeleteProduct(string productName, string description, string url, string color, string size, decimal price, int order)
         {
-            ProductRepository productRepository = new ProductRepository();
-            List<Products> products = productRepository.GetAll();
+            HomeViewModel homeViewModel = new HomeViewModel();
 
-            foreach (Products product in products)
+            foreach (Products product in homeViewModel.Products)
             {
                 if (product.ProductOrder == order)
                 {
-                    ProductRepository.products.Remove(product);
+                    homeViewModel.Products.Remove(product);
                     break;
                 }
             }
